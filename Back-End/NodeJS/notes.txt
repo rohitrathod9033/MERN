@@ -1,0 +1,108 @@
+What is Node.js ?
+- it is javscript runtime environment.
+- it is used for server side programming.
+
+- Nodejs not a programming language,library or framework.
+
+
+
+Node REPL :
+- Node.js has a built-in REPL (Read-Evaluate-Print Loop) that allows you to execute JavaScript code in real-time.
+- .help gives us commands.
+- .exit to exit the REPL.
+- .break to exit the current execution context.
+- .clear to clear the current execution context.
+- .load to load a file into the REPL.
+- .save to save the current execution context to a file.
+- .edit to open the current execution context in an editor.
+- .inspect to inspect an object.
+- .list to list the current execution context.
+- .open to open a file in the default editor.
+- .pwd to print the current working directory.
+- .restart to restart Node.js.
+- .scripts to list the scripts loaded into the REPL.
+- .settings to view or set the settings of the REPL.
+- .tls to create a secure REPL connection.
+- .use to use a module in the REPL.
+- .version to print the version of Node.js.
+
+
+Node File :
+- node fileName.js
+
+
+Run JS file with Node:
+- node filename.js
+
+Process :
+- This object provide information about,and control over,the current Node.js process.
+
+- process.argv : returns an array containing the command line arguments passed when the Node.js process was luanched.
+
+
+module.exports :
+- requiring files
+
+require() : a built-in function to include external moduales that exist in separate files.
+
+module.exports : a special object
+
+
+
+
+Export Directory :
+
+1) require  : index.js  (entry point)
+
+
+
+NPM (Node Package Manager) :
+
+- npm is standard package manager for Node.js.
+- library of packages.
+- command line tool
+
+
+Package : A package in Node.js is a collection of files that includes a module and its metadata.
+
+
+Installing Package :
+
+npm install <- package name ->
+npm i <- package name ->
+
+
+node_modules : The node_modules folders contains every installed dependency for your project.
+
+package-lock.json : It records the exact version of every installed dependency, including it sub-dependencies and thier versions.
+
+
+package.json : The package.json file contains descriptive and functional metadata about a project, such as a name, version, and dependencies.
+
+npm install : The npm install command installs packages and their dependencies from the npm registry or from a package's package.json file. 
+
+
+npm init : The npm init command creates a new package.json file in the current directory.
+- npm init <initializer> can be used to set up a new or existing npm package.
+
+
+Local vs Global :
+
+npm install -g <- Package name ->
+
+npm link <- Package name ->
+
+
+
+
+
+require  v/s import :
+
+import {sum} from "./math.js"
+
+- We can't selectively load only the pieces we need with require but with import, we can selectively load only the piece we need, which can save memory.
+
+- Loading is synchronous for 'require' but can be asychronous for 'import'  
+
+note : If you're using require but want to switch to import/export, you can add a package.json file with "type": "module" by running npm init.
+
